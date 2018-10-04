@@ -1,0 +1,25 @@
+*{
+    background-color: #695d47;
+    color: #fc7138;
+}
+
+/*nav bar*/
+.navbar{
+  font-size: 20px;
+  width:100%;
+  padding: 0;
+  height: 70px;
+}
+
+/* ds logo*/
+img{
+  margin-left: 5px;
+  width:60px;
+  height: 60px;
+}
+
+#logout{
+  color:#fff;
+  margin-right:5px;
+  text-decoration:none;
+}
