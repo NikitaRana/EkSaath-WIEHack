@@ -295,51 +295,57 @@
     <div class="left">
       <div class="content">
         <h2>Sign Up</h2>
-        <form id="form-signup" method="post" onsubmit="return false;">
+        <form id="form-signup"  action="/signup" method="POST">
           <div class="form-element form-stack">
             <label for="email" class="form-label">Email</label>
             <input id="email" type="email" name="email">
           </div>
           <div class="form-element form-stack">
             <label for="username-signup" class="form-label">Username</label>
-            <input id="username-signup" type="text" name="username">
+            <input id="username-signup" type="text" name="username" required>
           </div>
           <div class="form-element form-stack">
             <label for="password-signup" class="form-label">Password</label>
-            <input id="password-signup" type="password" name="password">
+            <input id="password-signup" type="password" name="password" minlength="5" required
+               placeholder="5 characters minimum">
           </div>
           <div class="form-element form-stack">
-            <label for="username-signup" class="form-label">Adhaar ID</label>
-            <input id="username-signup" type="number" name="adhaar">
+            <label for="adhar-signup" class="form-label">Adhaar ID</label>
+            <input id="adhar-signup" type="number" name="adhaar" required>
+          </div>
+          <div class="form-element form-stack">
+            <label for="interest-signup" class="form-label">Interests</label>
+            <input id="interest-signup" type="text" name="interest" required>
           </div>
             <div class="form-element form-checkbox">
             <input id="confirm-terms" type="checkbox" name="confirm" value="yes" class="checkbox">
             <label for="confirm-terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
           </div>
           <div class="form-element form-submit">
-            <button id="signUp" class="signup" type="submit" name="signup">Sign up</button>
-            <button id="goLeft" class="signup off">Log In</button> 
+            <button id="signUp" class="signup" type="submit">Sign up</button>
           </div>
         </form>
+        <button id="goLeft" class="signup off">Already a User ?</button>
       </div>
     </div>
     <div class="right">
       <div class="content">
         <h2>Login</h2>
-        <form id="form-login" method="post" onsubmit="return false;">
+        <form id="form-login" action="/login" method="POST">
           <div class="form-element form-stack">
-            <label for="username-login" class="form-label">Username</label>
+            <label for="username-login" class="form-label" required>Username</label>
             <input id="username-login" type="text" name="username">
           </div>
           <div class="form-element form-stack">
-            <label for="password-login" class="form-label">Password</label>
+            <label for="password-login" class="form-label" required>Password</label>
             <input id="password-login" type="password" name="password">
           </div>
           <div class="form-element form-submit">
-            <button id="logIn" class="login" type="submit" name="login">Log In</button>
-            <button id="goRight" class="login off" name="signup">Sign Up</button>
+            <button type="submit" id="logIn" class="login">Log In</button>
+            
           </div>
         </form>
+        <button id="goRight" class="login off" name="signup">Sign Up</button>
       </div>
     </div>
   </div>
