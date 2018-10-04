@@ -11,12 +11,11 @@
   height: 70px;
 }
 
-/* ds logo*/
-img{
-  margin-left: 5px;
-  width:60px;
-  height: 60px;
+.bg-light , .navbar-light{
+  background-color: #5b4037;
+  color: #ff9933;
 }
+
 
 #logout{
   color:#fff;
