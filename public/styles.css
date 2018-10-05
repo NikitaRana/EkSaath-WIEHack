@@ -1,24 +1,173 @@
-*{
-    background-color: #695d47;
-    color: #fc7138;
-}
-
-/*nav bar*/
-.navbar{
-  font-size: 20px;
-  width:100%;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body, html {
   padding: 0;
-  height: 70px;
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.bg-light , .navbar-light{
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body .profile {
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  background-color: #ff9933;
+  color: #fff;
+  font-size: 16px;
+  background: linear-gradient(209deg, #ff9944, #5f4037, #138808);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 11s ease infinite;
+  animation: AnimationName 11s ease infinite;
+}
+
+.body .profile .pic {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.body .profile .pic img {
+  border: 2px solid #ff9933;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  padding: auto;
+  margin: 40px auto 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.body .profile .info {
+  margin: 10%;
+  width: 60%;
+  height: 100%;
+  color: #fff;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  line-height: 35px;
+  background-color: transparent;
+  padding: 5%;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 58%;
+  }
+  50% {
+    background-position: 100% 43%;
+  }
+  100% {
+    background-position: 0% 58%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 58%;
+  }
+  50% {
+    background-position: 100% 43%;
+  }
+  100% {
+    background-position: 0% 58%;
+  }
+}
+
+.body .main {
+  width: 75%;
+  margin-left: 25%;
+}
+
+.body .main .topnav {
+  height: 50px;
+  width: 100%;
   background-color: #5b4037;
+  color: #ff9933;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.body .main .topnav .item {
+  padding: auto 5px;
+  border-right: 2px solid rgba(255, 153, 51, 0.5);
+}
+
+.body .main .topnav .item .atag {
+  text-decoration: none;
+  -webkit-text-decoration-color: none;
+          text-decoration-color: none;
+  padding: 15px;
   color: #ff9933;
 }
 
-
-#logout{
-  color:#fff;
-  margin-right:5px;
-  text-decoration:none;
+.body .main .topnav .item .atag:hover {
+  text-decoration: none;
+  -webkit-text-decoration-color: none;
+          text-decoration-color: none;
+  color: #fff;
+  -webkit-text-emphasis: unset;
+          text-emphasis: unset;
 }
+
+.body .main .topnav .waste {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 100px;
+          flex: 3 1 100px;
+}
+
+.body .main .topnav .last {
+  border-left: 2px solid rgba(255, 153, 51, 0.5);
+  border-right: 0;
+}
+
+.body .main .feeds {
+  margin: 3%;
+  padding: 3%;
+  border: solid 1px #138808;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.22);
+          box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.22);
+  width: 88%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body .main .feeds .side {
+  width: 15%;
+  padding: 4%;
+  margin: auto;
+}
+
+.body .main .feeds .side .img {
+  margin: 0;
+  padding: 0;
+}
+
+.body .main .feeds .side .img img {
+  width: 120px;
+  height: 120px;
+  background-color: #138808;
+  border-radius: 50%;
+  border: 1px solid #138808;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.22);
+          box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.22);
+}
+
+.body .main .feeds .text {
+  width: 70%;
+}
+
+.body .main .feeds .text b {
+  color: #ff9933;
+}
+/*# sourceMappingURL=styles.css.map */

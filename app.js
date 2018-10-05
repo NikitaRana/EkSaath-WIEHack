@@ -99,9 +99,32 @@ app.post('/signup',function(req,res){
     });
 });
 
+app.get('/logout',function(req,res){
+    req.logout();
+    res.redirect("/login");
+});
+
 app.get('/othergrps',middleware.isLoggedIn,function(req,res){
     res.render('othergrps');
 });
+
+app.get('/yourgrps',middleware.isLoggedIn,function(req,res){
+    res.render('yourgrps');
+});
+
+app.get('/resources',middleware.isLoggedIn,function(req,res){
+    res.render('resources');
+});
+
+app.get('/interactions',middleware.isLoggedIn,function(req,res){
+    res.render('interactions');
+});
+
+app.get('/scholarships',middleware.isLoggedIn,function(req,res){
+    res.render('scholarships');
+});
+
+
 
 app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   console.log("Server Started");
