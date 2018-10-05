@@ -1,5 +1,100 @@
 <%include partials/header%>        
-        <div class="main">
-            <%include partials/topbar%>
+    <div class="main">
+        <%include partials/topbar%>
+        <div class="advice">
+        <div class="container">
+          <ul class="tiles">
+            <li class="tile">
+              <i class="fa fa-file-o icon" aria-hidden="true"></i>
+              <p class="title">Shweta Sinha</p>
+              <p class="amount">4.5/5.0</p>
+            </li>
+            <li class="tile">
+              <i class="fa fa-file-o icon" aria-hidden="true"></i>
+              <p class="title">Dexter Gonsalves</p>
+              <p class="amount">4.1/5.0</p>
+            </li>
+            <li class="tile">
+              <i class="fa fa-file-o icon" aria-hidden="true"></i>
+              <p class="title">Sharanjeet Lamba</p>
+              <p class="amount">4.4/5.0<p>
+            </li>
+            <li class="tile">
+              <i class="fa fa-file-o icon" aria-hidden="true"></i>
+              <p class="title">Noor Fatima</p>
+              <p class="amount">4.0/5.0</p>
+            </li>
+            <li class="tile initial" id="myBtn">
+              <i class="fa fa-file-o icon" aria-hidden="true"></i>
+              <p class="title">Manish Tokas</p>
+              <p class="amount">4.8/5.0</p>
+            </li>
+            <li class="tile">
+              <i class="fa fa-file-o icon" aria-hidden="true"></i>
+              <p class="title">Kavya Sharma</p>
+              <p class="amount">4.2/5.0</p>
+            </li>
+            <li class="tile">
+              <i class="fa fa-file-o icon" aria-hidden="true"></i>
+              <p class="title">Apurv Malik</p>
+              <p class="amount">4.0/5/0</p>
+            </li>
+          </ul>
+        </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Welcome</h2>
+            </div>
+            <div class="modal-body">
+              <button id="btnt">
+                  Take the Test
+              </button>
+              <span id="mode" style="display:none">
+                  Your test will start soon!
+              </span>
+            </div>
+          </div>
+
+            </div>
+        
+        
+        <script>
             
+            var modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            
+            document.getElementById("btnt").onclick = function(){
+                document.getElementById('mode').style.display = "block";
+            }
+            
+        </script>
 <%include partials/footer%>

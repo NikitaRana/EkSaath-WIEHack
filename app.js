@@ -67,8 +67,11 @@ app.post('/signup',function(req,res){
         email = req.body.email;
         console.log(reqName+":"+pass+":"+email);
     var strHtml =  '<h3>Hello, from Eksaath!!</h3>'+
-                '<h4>'+ reqName +',your account has been activated.</h4><h4> Registered email '+ email +'</h4><h4>Registered Password'+ pass +'</h4>'+
-                '<p> </p>';
+                '<h4>'+ reqName +',your account has been activated.</h4>'+
+                '<p> Your account has been activated !! <br> Welcome to the community of EkSaath : Where like minded people learn together. We hope you have an amazing experience and become confident enough to proof your worth to the professional world. The following are your registered account details.</p>'+ 
+                '<h4> Registered email '+ email +'</h4><h4>Registered Password'+ pass +'</h4>'+
+                '<p>Note : We shall be sending your password in plain text to your registered e mail. Therefore, it’s a request to ensure necessary security measures while accessing your registered mail.</p>'+
+                'Thanking You<br>With warm regards,<br>EkSaath Team </p>';
     const mailOptions = {
                 from: 'eksaath.wie@gmail.com', // sender address
                 to: email, // list of receivers
